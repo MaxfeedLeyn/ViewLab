@@ -1,0 +1,45 @@
+@using ViewLab.Models
+
+@{
+    ViewData["Title"] = "ProductInfo";
+
+    var products = new List<Product>
+    {
+        new Product { Name = "Bread",   Price = 10 },
+        new Product { Name = "Milk",    Price = 11 },
+        new Product { Name = "Cheese",  Price = 140 },
+        new Product { Name = "Sausage", Price = 110 },
+        new Product { Name = "Potato",  Price = 7 },
+        new Product { Name = "Banana",  Price = 23 },
+        new Product { Name = "Tomato",  Price = 25 },
+        new Product { Name = "Candy",   Price = 75 }
+    };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1>Information about product</h1>
+    
+    <table class="table table-borderless table-sm" style="width:auto">
+        <thead>
+        <tr><th>Name</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var p in products)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

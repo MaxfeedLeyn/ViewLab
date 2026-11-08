@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "Greetings";
+
+    string myMessage = "Hello C# Marathon!";
+    string greeting = "Welcome to our project!";
+    DateTime now = DateTime.Now;
+
+    string wish = now.Hour < 12 ? "Good Morning!" : "Good Evening!";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <p>The value of myMessage is: @myMessage</p>
+    <p>The greeting is: @greeting</p>
+    <p>Here in Ukraine: <u>@now.DayOfWeek</u></p>
+    <p>We wish you: <u>@wish</u></p>
+    <p>Today is <u>@now.ToString("dddd")</u></p>
+    
+    <table border="1" style="border-collapse: collapse;">
+        <tr><th>Name</th><th>Value</th></tr>
+        <tr><td>Day</td><td>@now.Day</td></tr>
+        <tr><td>Hour</td><td>@now.Hour</td></tr>
+        <tr><td>Minute</td><td>@now.Minute</td></tr>
+        <tr><td>Second</td><td>@now.Second</td></tr>
+    </table>
+</div>
+</body>
+</html>
